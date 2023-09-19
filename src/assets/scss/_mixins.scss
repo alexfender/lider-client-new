@@ -1,0 +1,31 @@
+@import "~assets/scss/variables";
+
+@mixin link($color: $gray-text) {
+  color: $color;
+  border-bottom: solid 1px $color;
+  cursor: pointer;
+}
+
+@mixin button() {
+  height: 34px;
+  border-radius: 4px;
+  padding: 9px 18px;
+  background-color: $orange;
+  color: $white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.1s ease-in-out;
+  &:hover {
+    background-color: $darkblue;
+  }
+}
+
+@mixin overlay() {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba($darkblue-1, 0.7);
+}

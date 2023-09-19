@@ -1,0 +1,19 @@
+@import "~assets/scss/variables";
+
+.wrapper {
+  padding: 10px 22px;
+}
+
+main {
+  min-height: calc(100vh - 172px);
+  border-radius: 6px;
+  background-color: $white;
+}
+
+.mobile {
+  padding: 0;
+
+  & main {
+    border-radius: 0;
+  }
+}

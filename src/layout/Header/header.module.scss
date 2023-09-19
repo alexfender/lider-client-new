@@ -1,0 +1,152 @@
+@import "~assets/scss/variables";
+@import "~assets/scss/mixins";
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+  width: 100%;
+  height: 64px;
+  padding: 10px 40px;
+  background-color: $white;
+
+  & > div {
+    height: 100%;
+  }
+
+  &.mobile {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+    gap: unset;
+  }
+}
+
+.logo {
+  min-width: 165px;
+  max-width: 165px;
+  display: flex;
+  align-items: center;
+  & img {
+    width: 100%;
+  }
+}
+
+.mobile .logo {
+  min-width: 99px;
+  max-width: 99px;
+}
+
+.menuButton {
+  min-width: 101px;
+  max-width: 101px;
+  height: 44px;
+  padding: 11px 18px 11px 38px;
+  border-radius: 4px;
+  color: $white;
+  font-size: 14px;
+  background: url(./hamburger.svg) 12px center no-repeat, $darkblue;
+  background-size: 22px;
+  cursor: pointer;
+  transition: background 0.1s ease-in-out;
+  &:hover {
+    background: url(./hamburger.svg) 12px center no-repeat, $darkblue-2;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $darkblue;
+  white-space: nowrap;
+  &_title {
+    margin-bottom: 2px;
+    font-size: 10px;
+    font-weight: 400;
+  }
+  &_value {
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+.wishlist {
+  min-width: 24px;
+  height: 24px;
+  background: url(./heart.svg) center center no-repeat;
+}
+
+.exit {
+  display: flex;
+  align-items: center;
+  & button {
+    font-size: 12px;
+    line-height: 14px;
+    @include link($darkblue);
+  }
+}
+
+.menuButtonMobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  height: 44px;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 14px;
+  height: 10px;
+  & span {
+    display: block;
+    height: 2px;
+    background-color: $darkblue;
+    transition: transform 0.1s, opacity 0.1s ease-in-out;
+  }
+
+  &.shown {
+    & span {
+      &:first-child {
+        transform: rotateZ(45deg) translate(3px, 1px);
+      }
+      &:last-child {
+        transform: rotateZ(-45deg) translate(4.1px, -2.7px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.mobile {
+  .top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .leftBlock,
+  .rightBlock {
+    display: flex;
+    align-items: center;
+  }
+
+  .rightBlock {
+    justify-content: end;
+  }
+
+  .user {
+    min-width: 44px;
+    height: 44px;
+    background: url(./user2.svg) center center no-repeat;
+  }
+
+  .wishlist {
+    min-width: 44px;
+    height: 44px;
+  }
+}

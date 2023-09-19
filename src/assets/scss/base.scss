@@ -1,0 +1,104 @@
+@import "./variables";
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/SFProText-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/SFProText-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/SFProText-Semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/SFProText-Bold.woff2") format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  margin: 0;
+  font-family: "SF Pro Text", sans-serif;
+  font-size: 13px;
+  line-height: 1.25;
+  color: $gray-text;
+  min-width: 320px;
+  position: relative;
+  overflow-x: hidden;
+
+  &.noScroll {
+    position: fixed;
+    width: 100vw;
+  }
+}
+html,
+body {
+  background: $gray;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+  color: $darkblue;
+  border-bottom: solid 1px $darkblue;
+}
+input,
+textarea {
+  outline: 0;
+}
+button {
+  background: none;
+}

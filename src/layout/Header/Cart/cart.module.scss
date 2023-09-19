@@ -1,0 +1,62 @@
+@import "~assets/scss/variables";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  min-width: 132px;
+  height: 44px;
+  padding: 7px 22px 7px 10px;
+  border: solid 1px $gray-1;
+  border-radius: 4px;
+  background: $white;
+  color: $darkblue;
+  transition: color 0.1s, background 0.1s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background: $orange;
+    color: $white;
+
+    .icon {
+      margin-right: 12px;
+      & svg {
+        fill: $white;
+      }
+    }
+  }
+
+  &.mobile {
+    min-width: auto;
+    padding: 13px;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.icon {
+  margin-right: 12px;
+  & svg {
+    fill: $orange;
+    transition: fill 0.1s ease-in-out;
+  }
+}
+
+.summ {
+  margin-bottom: 1px;
+  font-size: 14px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.count {
+  font-size: 12px;
+}
+
+.mobile {
+  & .summ {
+    font-size: 12px;
+  }
+
+  .count {
+    font-size: 9px;
+  }
+}

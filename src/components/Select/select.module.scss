@@ -1,0 +1,92 @@
+@import "~assets/scss/variables";
+
+.select {
+  position: relative;
+  min-width: 165px;
+  margin-right: 13px;
+  color: $darkblue;
+  font-size: 12px;
+  font-weight: 600;
+
+  &.mobile {
+    min-width: 140px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+.selected {
+  display: flex;
+  align-items: center;
+  height: 26px;
+  padding: 4px 10px 4px 14px;
+  background-color: $gray;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background, color 0.1s ease-in-out;
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(./arrowDown.svg) center center no-repeat;
+  }
+
+  &:hover {
+    background-color: $gray-2;
+    color: $orange;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  width: 204px;
+  right: 0;
+  top: 0;
+  border-radius: 4px;
+  border: solid 1px $gray-1;
+  background-color: $white;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background 0.1s ease-in-out;
+
+  &:not(:last-child) {
+    border-bottom: solid 1px $gray-1;
+  }
+
+  &:first-child:after {
+    content: "";
+    position: absolute;
+    right: 9px;
+    top: 4px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(./arrowDown.svg) center center no-repeat;
+    rotate: 180deg;
+  }
+
+  &:hover {
+    background-color: $gray;
+  }
+}
+
+.mobile {
+  .selected {
+    height: 30px;
+    padding: 7px 20px 7px 4px;
+    border-radius: 0 4px 4px 0;
+
+    &:after {
+      right: 7px;
+    }
+  }
+}

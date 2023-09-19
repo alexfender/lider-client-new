@@ -1,0 +1,97 @@
+@import "~assets/scss/variables";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  border: solid 1px $gray-1;
+  border-radius: 4px;
+  padding: 4px;
+  background: url(./search.svg) 9px center no-repeat;
+
+  input {
+    height: 34px;
+    width: 100%;
+    margin-left: 25px;
+    margin-right: 13px;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+
+  &.mobile {
+    position: relative;
+    padding: 7px;
+    border: none;
+    border-radius: 0;
+    background-color: $darkblue;
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 16px;
+      height: 16px;
+      left: 15px;
+      top: 13px;
+      background: url(./search.svg) center center no-repeat;
+    }
+
+    input {
+      height: auto;
+      margin: 0;
+      padding-left: 27px;
+      border: solid 1px $gray-1;
+      border-radius: 4px 0 0 4px;
+      background-color: $gray;
+      font-size: 12px;
+    }
+  }
+}
+
+.rightBlock {
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  width: 165px;
+  height: 26px;
+  margin-right: 13px;
+}
+
+.dropdownItem {
+  padding: 13px 14px;
+  font-size: 14px;
+  color: $darkblue;
+  &:not(:last-child) {
+    border-bottom: solid 1px $gray;
+  }
+
+  &:active,
+  &.active {
+    background-color: $green-light;
+  }
+}
+
+.selectMobile {
+  position: relative;
+  height: 30px;
+  padding: 0 27px 0 4px;
+  margin-right: 7px;
+  border-radius: 0 4px 4px 0;
+  white-space: nowrap;
+  font-size: 11px;
+  color: $darkblue;
+  background-color: $gray;
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: 7px;
+    top: calc(50% - 8px);
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url(./arrowDown.svg) center center no-repeat;
+  }
+}

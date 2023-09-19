@@ -1,0 +1,39 @@
+@import "~assets/scss/variables";
+
+.head {
+  padding: 18px;
+
+  &.mobile {
+    padding: 7px 7px 7px 14px;
+  }
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  color: $darkblue;
+  margin-bottom: 6px;
+
+  & .partNumber {
+    color: $orange;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile {
+  .title {
+    overflow: hidden;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
+
+  .info {
+    font-size: 12px;
+  }
+}

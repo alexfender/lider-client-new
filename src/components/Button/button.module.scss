@@ -1,0 +1,10 @@
+@import "~assets/scss/variables";
+@import "~assets/scss/mixins";
+.button {
+  @include button();
+
+  &.mobile {
+    height: 30px;
+    padding: 7px 12px;
+  }
+}

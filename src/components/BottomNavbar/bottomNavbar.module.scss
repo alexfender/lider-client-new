@@ -1,0 +1,40 @@
+@import "~assets/scss/variables";
+@import "~assets/scss/mixins";
+
+.wrapper {
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+  border-radius: 14px 14px 0 0;
+  background-color: $white;
+  z-index: 2;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+  padding-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: $darkblue;
+  border-bottom: solid 1px $gray;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 37px;
+    height: 5px;
+    top: 10px;
+    left: calc(50% - 18px);
+    border-radius: 3px;
+    background-color: $gray-text;
+  }
+}
+
+.overlay {
+  @include overlay();
+}
